@@ -10,18 +10,19 @@
     "tsc": "tsc",
     "webpack:w": "webpack -d --watch --color",
     "typings": "typings",
-    "webpack-server":"webpack-dev-server"
+    "webpack-server": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^2.1.0",
     "gulp": "^3.9.1",
     "gulp-run": "^1.6.12",
+    "lite-server": "^2.2.0",
     "ts-loader": "^0.8.2",
     "typescript": "1.8.10",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "1.14.1",
-    "lite-server": "^2.2.0"
+    "webpack-dev-server": "1.14.1"
   },
   "dependencies": {
     "angular2": "^2.0.0-beta.17",
