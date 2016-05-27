@@ -28,17 +28,8 @@ enableProdMode();
 })
 
 @RouteConfig([
-  {
-    path: '/dash-board',
-    name: 'Dash',
-    component: DashBoardComponent,
-    useAsDefault: true
-  },
-  {
-    path: '/hero',
-    name: 'Hero',
-    component: HeroComponent
-  }
+  {path: '/dash-board', name: 'Dash', component: DashBoardComponent, useAsDefault: true },
+  {path: '/hero', name: 'Hero', component: HeroComponent }
   // {
   //   path: '/detail/:id',
   //   name: 'HeroDetail',

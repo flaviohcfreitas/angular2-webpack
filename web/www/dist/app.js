@@ -23009,7 +23009,7 @@ webpackJsonp([1,2],[
 	};
 	const core_1 = __webpack_require__(/*! angular2/core */ 365);
 	const hero_component_ts_1 = __webpack_require__(/*! ./Component/hero/hero.component.ts */ 626);
-	const dashboard_component_ts_1 = __webpack_require__(/*! ./Component/dashboard/dashboard.component.ts */ 634);
+	const dashboard_component_ts_1 = __webpack_require__(/*! ./Component/dashboard/dashboard.component.ts */ 633);
 	const core_2 = __webpack_require__(/*! angular2/core */ 365);
 	const router_1 = __webpack_require__(/*! angular2/router */ 433);
 	core_2.enableProdMode();
@@ -23036,17 +23036,8 @@ webpackJsonp([1,2],[
 	    `
 	    }),
 	    router_1.RouteConfig([
-	        {
-	            path: '/dash-board',
-	            name: 'Dash',
-	            component: dashboard_component_ts_1.DashBoardComponent,
-	            useAsDefault: true
-	        },
-	        {
-	            path: '/hero',
-	            name: 'Hero',
-	            component: hero_component_ts_1.HeroComponent
-	        }
+	        { path: '/dash-board', name: 'Dash', component: dashboard_component_ts_1.DashBoardComponent, useAsDefault: true },
+	        { path: '/hero', name: 'Hero', component: hero_component_ts_1.HeroComponent }
 	    ]), 
 	    __metadata('design:paramtypes', [])
 	], AppComponent);
@@ -23071,7 +23062,7 @@ webpackJsonp([1,2],[
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	const core_1 = __webpack_require__(/*! angular2/core */ 365);
-	const hero_list_component_1 = __webpack_require__(/*! ./hero-list.component */ 632);
+	const hero_list_component_1 = __webpack_require__(/*! ./hero-list.component */ 627);
 	let HeroComponent = class HeroComponent {
 	};
 	HeroComponent = __decorate([
@@ -23090,6 +23081,48 @@ webpackJsonp([1,2],[
 
 /***/ },
 /* 627 */
+/*!***************************************************!*\
+  !*** ./app/Component/hero/hero-list.component.ts ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	const core_1 = __webpack_require__(/*! angular2/core */ 365);
+	const hero_service_1 = __webpack_require__(/*! ../../Service/hero/hero.service */ 628);
+	let HeroListComponent = class HeroListComponent {
+	    constructor(heroService) {
+	        this.heroService = heroService;
+	        this.heroes = this.heroService.getHeroes();
+	    }
+	};
+	HeroListComponent = __decorate([
+	    core_1.Component({
+	        selector: 'hero-list',
+	        providers: [hero_service_1.HeroService],
+	        template: `
+	      <ul>
+	        <li *ngFor = "let hero of heroes">
+	          {{hero.name}}
+	        </li>
+	      </ul>
+	    `
+	    }), 
+	    __metadata('design:paramtypes', [hero_service_1.HeroService])
+	], HeroListComponent);
+	exports.HeroListComponent = HeroListComponent;
+
+
+/***/ },
+/* 628 */
 /*!******************************************!*\
   !*** ./app/Service/hero/hero.service.ts ***!
   \******************************************/
@@ -23106,8 +23139,8 @@ webpackJsonp([1,2],[
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	const core_1 = __webpack_require__(/*! angular2/core */ 365);
-	const mock_heroes_1 = __webpack_require__(/*! ../../models/hero/mock-heroes */ 628);
-	const firebase_service_1 = __webpack_require__(/*! ../../firebase.service */ 633);
+	const mock_heroes_1 = __webpack_require__(/*! ../../models/hero/mock-heroes */ 629);
+	const firebase_service_1 = __webpack_require__(/*! ../../firebase.service */ 630);
 	const ref = "/teste";
 	let HeroService = class HeroService {
 	    constructor() {
@@ -23137,7 +23170,7 @@ webpackJsonp([1,2],[
 
 
 /***/ },
-/* 628 */
+/* 629 */
 /*!****************************************!*\
   !*** ./app/models/hero/mock-heroes.ts ***!
   \****************************************/
@@ -23159,8 +23192,45 @@ webpackJsonp([1,2],[
 
 
 /***/ },
-/* 629 */,
 /* 630 */
+/*!*********************************!*\
+  !*** ./app/firebase.service.ts ***!
+  \*********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	const core_1 = __webpack_require__(/*! angular2/core */ 365);
+	var db = __webpack_require__(/*! firebase */ 631);
+	const config = {
+	    apiKey: "AIzaSyA1XTR7awx5d-hkM5wXgXo-qZl69o1cTMA",
+	    authDomain: "testeapp-7e2b1.firebaseapp.com",
+	    databaseURL: "https://testeapp-7e2b1.firebaseio.com",
+	    storageBucket: "",
+	};
+	db.initializeApp(config);
+	let FirebaseService = class FirebaseService {
+	    constructor(ref) {
+	        this.data_base = db.database().ref(ref);
+	    }
+	};
+	FirebaseService = __decorate([
+	    core_1.Injectable(), 
+	    __metadata('design:paramtypes', [String])
+	], FirebaseService);
+	exports.FirebaseService = FirebaseService;
+
+
+/***/ },
+/* 631 */
 /*!****************************************!*\
   !*** ./~/firebase/firebase-browser.js ***!
   \****************************************/
@@ -23173,12 +23243,12 @@ webpackJsonp([1,2],[
 	 *
 	 *   firebase = require('firebase');
 	 */
-	__webpack_require__(/*! ./firebase */ 631);
+	__webpack_require__(/*! ./firebase */ 632);
 	module.exports = firebase;
 
 
 /***/ },
-/* 631 */
+/* 632 */
 /*!********************************!*\
   !*** ./~/firebase/firebase.js ***!
   \********************************/
@@ -23840,87 +23910,7 @@ webpackJsonp([1,2],[
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 632 */
-/*!***************************************************!*\
-  !*** ./app/Component/hero/hero-list.component.ts ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	const core_1 = __webpack_require__(/*! angular2/core */ 365);
-	const hero_service_1 = __webpack_require__(/*! ../../Service/hero/hero.service */ 627);
-	let HeroListComponent = class HeroListComponent {
-	    constructor(heroService) {
-	        this.heroService = heroService;
-	        this.heroes = this.heroService.getHeroes();
-	    }
-	};
-	HeroListComponent = __decorate([
-	    core_1.Component({
-	        selector: 'hero-list',
-	        providers: [hero_service_1.HeroService],
-	        template: `
-	      <ul>
-	        <li *ngFor = "let hero of heroes">
-	          {{hero.name}}
-	        </li>
-	      </ul>
-	    `
-	    }), 
-	    __metadata('design:paramtypes', [hero_service_1.HeroService])
-	], HeroListComponent);
-	exports.HeroListComponent = HeroListComponent;
-
-
-/***/ },
 /* 633 */
-/*!*********************************!*\
-  !*** ./app/firebase.service.ts ***!
-  \*********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	const core_1 = __webpack_require__(/*! angular2/core */ 365);
-	var db = __webpack_require__(/*! firebase */ 630);
-	const config = {
-	    apiKey: "AIzaSyA1XTR7awx5d-hkM5wXgXo-qZl69o1cTMA",
-	    authDomain: "testeapp-7e2b1.firebaseapp.com",
-	    databaseURL: "https://testeapp-7e2b1.firebaseio.com",
-	    storageBucket: "",
-	};
-	db.initializeApp(config);
-	let FirebaseService = class FirebaseService {
-	    constructor(ref) {
-	        this.data_base = db.database().ref(ref);
-	    }
-	};
-	FirebaseService = __decorate([
-	    core_1.Injectable(), 
-	    __metadata('design:paramtypes', [String])
-	], FirebaseService);
-	exports.FirebaseService = FirebaseService;
-
-
-/***/ },
-/* 634 */
 /*!********************************************************!*\
   !*** ./app/Component/dashboard/dashboard.component.ts ***!
   \********************************************************/
