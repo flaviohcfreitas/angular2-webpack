@@ -13,7 +13,7 @@ module.exports = {
             'angular2/router',
             'angular2/http'
         ],
-        "app" : ['./main']
+        "app" : ['./app/main']
     },
 
     output: {

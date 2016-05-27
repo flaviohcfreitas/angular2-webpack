@@ -1,7 +1,7 @@
 import { Hero } from '../../models/hero/hero';
 import { Injectable } from 'angular2/core';
 import { HEROES } from '../../models/hero/mock-heroes';
-import {FirebaseService} from '../../service/firebase.service'
+import {FirebaseService} from '../../firebase.service'
 import {Http} from 'angular2/http';
 
 const ref = "/teste"

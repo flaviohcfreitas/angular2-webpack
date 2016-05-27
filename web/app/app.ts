@@ -1,6 +1,8 @@
 ﻿import {Component} from 'angular2/core';
 import {HeroComponent} from './Component/hero/hero.component.ts'
+import {DashBoardComponent} from './Component/dashboard/dashboard.component.ts'
 import {enableProdMode} from "angular2/core";
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
 enableProdMode();
 
@@ -14,9 +16,33 @@ enableProdMode();
 
 @Component({
     selector: 'myapp',
-    directives: [HeroComponent],
+    directives: [ROUTER_DIRECTIVES],
+    providers: [ROUTER_PROVIDERS], 
     template: `
-      <app-component></app-component>
+    <nav>
+        <a [routerLink]="['Dash']">Home</a>
+        <a [routerLink]="['Hero']">Heroes</a>
+    </nav>
+    <router-outlet></router-outlet>
     `
 })
+
+@RouteConfig([
+  {
+    path: '/dash-board',
+    name: 'Dash',
+    component: DashBoardComponent,
+    useAsDefault: true
+  },
+  {
+    path: '/hero',
+    name: 'Hero',
+    component: HeroComponent
+  }
+  // {
+  //   path: '/detail/:id',
+  //   name: 'HeroDetail',
+  //   component: HeroDetailComponent
+  // },
+])
 export class AppComponent {}
