@@ -1,6 +1,7 @@
 ﻿import {Component} from 'angular2/core';
-import {HeroComponent} from './Component/hero/hero.component.ts'
-import {DashBoardComponent} from './Component/dashboard/dashboard.component.ts'
+import {HeroComponent} from './Component/hero/hero.component';
+import {LoginComponent} from './Component/login/login.component';
+import {DashBoardComponent} from './Component/dashboard/dashboard.component';
 import {enableProdMode} from "angular2/core";
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
@@ -22,6 +23,7 @@ enableProdMode();
     <nav>
         <a [routerLink]="['Dash']">Home</a>
         <a [routerLink]="['Hero']">Heroes</a>
+        <a [routerLink]="['Login']">Login</a>
     </nav>
     <router-outlet></router-outlet>
     `
@@ -29,7 +31,8 @@ enableProdMode();
 
 @RouteConfig([
   {path: '/dash-board', name: 'Dash', component: DashBoardComponent, useAsDefault: true },
-  {path: '/hero', name: 'Hero', component: HeroComponent }
+  {path: '/hero', name: 'Hero', component: HeroComponent },
+  {path: '/login', name: 'Login', component: LoginComponent}
   // {
   //   path: '/detail/:id',
   //   name: 'HeroDetail',
