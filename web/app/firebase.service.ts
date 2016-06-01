@@ -1,7 +1,7 @@
 ﻿declare var require: any
 import {Injectable} from 'angular2/core';
 import {Http} from 'angular2/http';
-var db = require("firebase");
+var firebase_s = require("firebase");
 
 const config = {
     apiKey: "AIzaSyA1XTR7awx5d-hkM5wXgXo-qZl69o1cTMA",
@@ -9,15 +9,14 @@ const config = {
     databaseURL: "https://testeapp-7e2b1.firebaseio.com",
     storageBucket: "",
 };
-db.initializeApp(config);
+firebase_s.initializeApp(config);
 
 @Injectable()
 export class FirebaseService {
-    public data_base;
-    
-    constructor(ref:string){
-        this.data_base = db.database().ref(ref)
+    public db: any;
+    public auth: any
+    constructor() {
+        this.db = firebase_s.database().ref('/');
+        this.auth = firebase_s.auth();
     }
-    
- 
 }
