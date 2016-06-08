@@ -22,7 +22,7 @@ export class FirebaseService {
     }
     
     create_user(email:string, password:string){
-        this.auth.usuario.createUserWithEmailAndPassword(email, password).catch(function(error) {
+        this.auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;

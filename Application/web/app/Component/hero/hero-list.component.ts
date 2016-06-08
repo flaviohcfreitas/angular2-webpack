@@ -15,7 +15,7 @@ import {HeroService} from '../../Domain/Service/hero.service';
 
 export class HeroListComponent implements OnInit {
   
-  heroes: Hero[];
+  heroes: string[];
   usuario: any;
 
   constructor(private _context: HeroService) {
@@ -24,7 +24,7 @@ export class HeroListComponent implements OnInit {
     
     ngOnInit() {
         this._context.getHeroes().then(data=>{
-            this.heroes = data;
+            this.heroes = data
         })   
     }
     

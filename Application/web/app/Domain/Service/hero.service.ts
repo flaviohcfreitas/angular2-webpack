@@ -16,7 +16,6 @@ export class HeroService extends FirebaseService{
   }
   
   getHeroes() {
-    this.setHeroes();
     return this.db.once('value').then(data=>{
         return data.val()
     })
