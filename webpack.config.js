@@ -6,12 +6,22 @@ var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 module.exports = {
     entry: {
         'angular2': [
+            'core-js',
+            'zone.js',
             'rxjs',
             'reflect-metadata',
-            'angular2/bundles/angular2-polyfills',
-            'angular2/core',
-            'angular2/router',
-            'angular2/http'
+            'angular2-in-memory-web-api',
+            "@angular/core",
+            "@angular/common",
+            "@angular/compiler",
+            "@angular/core",
+            "@angular/forms",
+            "@angular/http",
+            "@angular/platform-browser",
+            "@angular/platform-browser-dynamic",
+            "@angular/router",
+            "@angular/router-deprecated",
+            "@angular/upgrade",
         ],
         "app" : ['./app/app']
     },

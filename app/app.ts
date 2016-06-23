@@ -1,8 +1,8 @@
-﻿import {bootstrap} from 'angular2/platform/browser'
-import {Component} from 'angular2/core';
+﻿import {bootstrap} from '@angular/platform-browser-dynamic'
+import {Component} from '@angular/core';
 import {DashBoardComponent} from './Component/dashboard.component';
-import {enableProdMode} from "angular2/core";
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import {enableProdMode} from "@angular/core";
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 enableProdMode();
 
