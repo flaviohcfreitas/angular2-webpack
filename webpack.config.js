@@ -2,10 +2,12 @@
 "use strict";
 var webpack = require('webpack');
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        'angular2': [
+        "3-webapp" : ['./app/web/app'],
+        '2-angular2': [
             'core-js',
             'zone.js',
             'rxjs',
@@ -22,21 +24,15 @@ module.exports = {
             "@angular/router",
             "@angular/router-deprecated",
             "@angular/upgrade",
-        ],
-        "app" : ['./app/app']
+        ]
+        
     },
 
     output: {
-        path: __dirname+"/www/dist",
+        path: __dirname+"/build",
         filename: "[name].js"
     },
 
-    devServer: {
-        hot: true,
-        contentBase: ".",
-        host: "localhost",
-        port: 9000
-    },
     resolve: {
         extensions: ['', '.ts', '.js', '.json', '.css', '.html']
     },
@@ -50,7 +46,21 @@ module.exports = {
         ]
     },
     plugins: [
-        new CommonsChunkPlugin({ name: 'angular2', filename: 'angular2.js', minChunks: Infinity }),
-        new CommonsChunkPlugin({ name: 'common', filename: 'common.js' }),
+        new CommonsChunkPlugin({ name: '2-angular2', filename: '2-angular2.js', minChunks: Infinity }),
+        new CommonsChunkPlugin({ name: '1-common', filename: '1-common.js' }),
+        new HtmlWebpackPlugin({
+            template: './app/web/index.html', // Load a custom template (ejs by default but can be changed) 
+            filename: 'index.html',
+            inject: 'body', // Inject all scripts into the body (this is the default so you can skip it),
+            chunksSortMode: function (a, b) {  //alphabetical order
+                if (a.names[0] > b.names[0]) {
+                    return 1;
+                }
+                if (a.names[0] < b.names[0]) {
+                    return -1;
+                }
+                return 0;
+                }
+        })
     ]
 };

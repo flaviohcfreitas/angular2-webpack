@@ -20,11 +20,13 @@
     "core-js": "^2.4.0",
     "gulp": "^3.9.1",
     "gulp-run": "^1.6.12",
+    "html-webpack-plugin": "^2.21.0",
     "lite-server": "^2.2.0",
     "ts-loader": "^0.8.2",
     "typescript": "1.8.10",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "1.14.1"
+    "webpack-dev-server": "1.14.1",
+    "webpack-html-plugin": "^0.1.1"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.3",
