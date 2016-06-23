@@ -1,8 +1,1 @@
-Application/web/node_modules/*
-Application/web/www/dist/*
-
-Application/mobile/node_modules/*
-Application/mobile/www/build/*
-Application/mobile/platforms/*
-Application/mobile/plugins/*
-Application/mobile/*.DS_Store
+node_modules/*
