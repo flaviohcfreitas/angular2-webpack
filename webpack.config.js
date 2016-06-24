@@ -5,7 +5,7 @@ var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: {
+    entry: { 
         "3-webapp" : ['./app/web/app'],
         '2-angular2': [
             'core-js',
