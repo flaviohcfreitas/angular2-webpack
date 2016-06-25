@@ -7,6 +7,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: { 
         "3-webapp" : ['./app/web/app'],
+        "3-electronapp" : ['./app/electron/electron'],
         '2-angular2': [
             'core-js',
             'zone.js',
