@@ -1,58 +1,14 @@
-webpackJsonp([2,3],{
+webpackJsonp([1,3],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1097);
+	module.exports = __webpack_require__(1095);
 
 
 /***/ },
 
-/***/ 1096:
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	const core_1 = __webpack_require__(674);
-	let DashBoardComponent = class DashBoardComponent {
-	};
-	DashBoardComponent = __decorate([
-	    core_1.Component({
-	        selector: 'home',
-	        template: `
-
-	    
-	        
-	     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-	        <div class="mdl-card mdl-cell mdl-cell--12-col">
-	          <div class="mdl-card__supporting-text">
-	            <h4>Technology</h4>
-	            Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
-	          </div>
-	          <div class="mdl-card__actions">
-	            <a href="#" class="mdl-button">Read our features</a>
-	          </div>
-	        </div>
-	      </section>
-	        
-	    `
-	    }), 
-	    __metadata('design:paramtypes', [])
-	], DashBoardComponent);
-	exports.DashBoardComponent = DashBoardComponent;
-
-
-/***/ },
-
-/***/ 1097:
+/***/ 1095:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -127,6 +83,50 @@ webpackJsonp([2,3],{
 	], AppComponent);
 	exports.AppComponent = AppComponent;
 	platform_browser_dynamic_1.bootstrap(AppComponent);
+
+
+/***/ },
+
+/***/ 1096:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	const core_1 = __webpack_require__(674);
+	let DashBoardComponent = class DashBoardComponent {
+	};
+	DashBoardComponent = __decorate([
+	    core_1.Component({
+	        selector: 'home',
+	        template: `
+
+	    
+	        
+	     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+	        <div class="mdl-card mdl-cell mdl-cell--12-col">
+	          <div class="mdl-card__supporting-text">
+	            <h4>Technology</h4>
+	            Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
+	          </div>
+	          <div class="mdl-card__actions">
+	            <a href="#" class="mdl-button">Read our features</a>
+	          </div>
+	        </div>
+	      </section>
+	        
+	    `
+	    }), 
+	    __metadata('design:paramtypes', [])
+	], DashBoardComponent);
+	exports.DashBoardComponent = DashBoardComponent;
 
 
 /***/ }
